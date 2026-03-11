@@ -1,0 +1,1 @@
+Add LinkedIn and content-specific phrases or patterns to avoid. The shared avoid-patterns (../Shared/voice/avoid-patterns.md) apply to all writing; use this file for patterns that show up mainly in your posts or blog content.

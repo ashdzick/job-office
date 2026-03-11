@@ -1,0 +1,1 @@
+Add 2–4 cover letter samples (or excerpts) you're happy with. The system uses these to match your register so drafts sound like you, not generic professional tone. Paste the full text of each; you can add a short note above each (e.g. "Led to interview" or "Represents the tone I want for this type of role").

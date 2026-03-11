@@ -1,0 +1,1 @@
+Add your LinkedIn and content-specific rules here. This layers on top of the shared voice rules (../Shared/voice/). Include anything that applies to posts and blog content but not necessarily to cover letters: tone for social, format preferences, topics to lean into or avoid.

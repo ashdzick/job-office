@@ -1,0 +1,1 @@
+Add your cover letter–specific rules here. This layers on top of the shared voice rules (../Shared/voice/). Include: openers and closers to use or avoid, register (formal vs. casual), and any role-specific preferences.

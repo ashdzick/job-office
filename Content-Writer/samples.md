@@ -1,0 +1,1 @@
+Add 2–4 writing samples here: LinkedIn posts or blog excerpts you're happy with. The system uses these to calibrate tone so new drafts sound like you, not like generic AI. Paste the full text of each sample; you can add a short note above each one (e.g. "High engagement" or "Represents the voice I want for how-to posts").

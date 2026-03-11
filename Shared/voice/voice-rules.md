@@ -1,0 +1,1 @@
+Describe how you write: register (formal vs. casual), tone, sentence length, and format preferences. This file is used by Content Writer and Cover Letter so output sounds like you, not like generic AI. Add examples or rules that matter to you.
