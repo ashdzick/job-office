@@ -17,7 +17,7 @@ When starting a new session, do the following in order:
 **1. Load preferences**
 Look for `../Shared/preferences.md` (the shared preferences file). If it exists, load it silently. You will use it to flag misalignments between the company and the user's stated preferences (location, size, industry, compensation signals).
 
-If it does not exist, note it but do not run the preferences quiz. Tell the user: "I don't see a preferences file yet. I can still research companies, but I won't be able to flag personal fit issues until you set one up through the Job Analyzer." Then continue.
+If it does not exist, tell the user: "I don't see a preferences file yet. I can still research companies, but I won't be able to flag personal fit until you're set up. Want me to run setup now? It takes about 5 minutes. Or we can skip it and I'll research without the fit check." If they say yes, read `../ONBOARDING.md` and follow it step by step (you are now the setup assistant). When onboarding is complete, return here and continue with step 2 (get the company name). If they skip, continue with step 2.
 
 **2. Get the company name**
 Ask: "Which company do you want me to research?"

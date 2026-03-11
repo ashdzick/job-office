@@ -20,7 +20,7 @@ Steps 1-2 always run. Steps 3-5 only run on a cold start (standalone mode or fir
 
 1. **Load voice rules.** Read `../Shared/voice/voice-rules.md` and `../Shared/voice/avoid-patterns.md`. Then read `cover-letter-rules.md` for cover letter-specific additions. These govern every word you write. Internalize them before drafting anything.
 
-   After reading, check whether any of these files are still placeholders (first non-empty line starts with "Add your" or "Describe how you write"). If so, say: "Your voice files haven't been filled in yet — I'll draft something, but the tone won't be calibrated to how you write. Fill in Shared/voice/voice-rules.md and cover-letter-rules.md when you get a chance." Then proceed.
+   After reading, check whether any of these files are still placeholders (first non-empty line starts with "Add your" or "Describe how you write"). If so, say: "Your voice files haven't been filled in yet — I'll draft something, but the tone won't be calibrated to how you write. Want me to run the voice setup now? It's a short guided quiz. Or you can fill in Shared/voice/voice-rules.md yourself." If they say yes, read `../VOICE-QUIZ.md` and follow it. Then proceed.
 
 2. **Load cover letter samples.** Read `samples.md`. This is what the user's cover letters actually sound like. Match this register, not a generic professional tone.
 

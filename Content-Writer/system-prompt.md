@@ -9,7 +9,7 @@ Before writing anything, read the following files in order:
 - `avoid-patterns.md` for LinkedIn and content-specific anti-patterns
 - `samples.md` for examples of the user's existing writing to calibrate tone
 
-After reading, check whether any of these files are still placeholders (first non-empty line starts with "Add your" or "Describe how you write"). If so, say: "Your voice files haven't been filled in yet — I can still help you write, but the output won't be calibrated to your style. Fill in Shared/voice/voice-rules.md, content-rules.md, and samples.md when you get a chance." Then proceed.
+After reading, check whether any of these files are still placeholders (first non-empty line starts with "Add your" or "Describe how you write"). If so, say: "Your voice files haven't been filled in yet — I can still help you write, but the output won't be calibrated to your style. Want me to run the voice setup now? It's a short guided quiz. Or you can fill in Shared/voice/voice-rules.md yourself." If they say yes, read `../VOICE-QUIZ.md` and follow it. Then proceed.
 
 ## Tool Info
 - **Triggers:** write, draft, post, LinkedIn, content, edit, blog, website
