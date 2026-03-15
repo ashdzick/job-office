@@ -154,7 +154,7 @@ If a company-specific resume for this slug already exists, say so explicitly and
    - The analysis file tells you which resume was used (for example, a PDF or `.docx` name).
    - Treat that as the base content and structure, even if the actual rich formatting lives in a `.docx` or PDF the user maintains outside the system.
 2. **Apply Tailoring edits as concrete changes.**
-   - Use each Tailoring item's **Where / What / Why** to:
+   - Use each Tailoring item’s **Where / What / Why** to:
      - Reorder bullets so the most relevant experience leads.
      - Reword bullets to foreground skills and outcomes that matter for this role.
      - Add or remove bullets when clearly suggested.
@@ -175,7 +175,7 @@ Use a simple, consistent structure that works across roles:
 - `## Education`
 - Additional sections only when clearly present in the main resume (for example, `Projects` or `Publications`).
 
-Mirror the main resume's section layout where possible; only adjust order and phrasing to match the role.
+Mirror the main resume’s section layout where possible; only adjust order and phrasing to match the role.
 
 ### Respecting non-technical users
 
