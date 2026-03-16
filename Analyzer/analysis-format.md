@@ -12,8 +12,6 @@ Structure every saved analysis file exactly as follows:
 ## Personal Fit
 [One sentence. Either "No conflicts with stated preferences." or a plain summary of any conflicts flagged — e.g., "Role requires in-person attendance in [location]. Salary range not disclosed."]
 
----
-
 ## Qualifications
 
 | Qualification | Status | Evidence or Gap |
@@ -22,8 +20,6 @@ Structure every saved analysis file exactly as follows:
 | ... | `Partial` | ... |
 | ... | `Gap` | ... |
 
----
-
 ## Strategic Notes
 
 [Note 1]
@@ -31,8 +27,6 @@ Structure every saved analysis file exactly as follows:
 [Note 2]
 
 [Note 3]
-
----
 
 ## Suggested Resume Updates
 
