@@ -109,7 +109,7 @@ Files: [Analysis](../Analyzer/Analyses/[slug].md)
 ---
 ```
 
-If the company already has a research verdict in the pipeline, include it on the status line. Leave Status, Applied, Follow-Up, Contact, Link, and Notes for the Tracker. Update the summary line at the top to reflect the new role count. If the pipeline file does not exist, create it with the header `# Application Pipeline`, a summary line, and the new card.
+If the company already has a research verdict in the pipeline, include it on the status line. Leave Status, Applied, Follow-Up, Contact, Link, and Notes for the Tracker. (Follow-up is set in the Tracker when the user marks a role Applied or asks to set a reminder.) Update the summary line at the top to reflect the new role count. If the pipeline file does not exist, create it with the header `# Application Pipeline`, a summary line, and the new card.
 
 ---
 

@@ -56,6 +56,8 @@ Add a new card to the pipeline file with:
 
 If the company and role already exist in the pipeline, flag it: "This role is already in the pipeline as [status]. Want to update it instead?"
 
+If the user adds a role with status Applied (or provides it), you can mention they can set a follow-up date now or later via an update.
+
 ### Update a Role
 
 When the user wants to change something on a tracked role:
@@ -65,6 +67,8 @@ Identify the role by company name, role title, or both. If the reference is ambi
 Updatable fields: Status, Next Follow-Up, Contact, Link, Notes, Applied date.
 
 For status changes, update the card. If the role has an Interview Timeline, add a dated entry. Always update Last Activity to today.
+
+When status is changed to **Applied**, prompt for a follow-up date or suggest one (e.g. 1–2 weeks from today). If the user provides or accepts a date, add the line `Follow-up: YYYY-MM-DD` to the card.
 
 If the update involves interview scheduling, contacts, or detailed notes and no detail block exists on the card yet, add one.
 
@@ -100,6 +104,8 @@ Present results grouped:
 
 For each, show the company, role, current status, and how many days since the last update or application date.
 
+When presenting group 3 (Applied with no follow-up scheduled), offer to set a follow-up date for any of those roles. If the user agrees, add the line `Follow-up: YYYY-MM-DD` to the card(s).
+
 ### Remove a Role
 
 If the user asks to remove a role entirely, change its status to Declined rather than deleting the card. Data is never deleted from the pipeline. If they specifically ask to delete it, confirm first: "I'd recommend marking it Declined so you keep the history. Want me to do that instead, or do you want it removed entirely?"
@@ -123,7 +129,7 @@ The pipeline file (`../Shared/pipeline.md`) uses a card-based structure. Each ro
 **[Status]** | Score: [HIGH / MEDIUM / LOW]  ← omit Score if no analysis run; omit Research if none
 **[Status]** | Score: [HIGH / MEDIUM / LOW] | Research: [Pursue / Watch / Skip]
 
-[Follow-Up: YYYY-MM-DD  |  Contact: Name, Title]  ← omit line entirely if neither is set
+[Follow-up: YYYY-MM-DD  |  Contact: Name, Title]  ← omit line entirely if neither is set
 
 Resume: [filename]  |  Applied: [YYYY-MM-DD]  |  Last Activity: [YYYY-MM-DD]
 ← use "Added" instead of "Applied" if not yet applied; omit Applied until then
@@ -149,7 +155,7 @@ Files: [Analysis](../Analyzer/Analyses/[slug].md) | [Research](../Company-Resear
 
 When writing cards:
 - Status leads as bold text on the first field line, followed by Score and Research on the same line separated by pipes.
-- Follow-Up and Contact share a line. Omit that line entirely if neither is set.
+- Follow-up and Contact share a line. Omit that line entirely if neither is set.
 - Resume, Applied/Added, and Last Activity share the bottom line.
 - Files line links to related artifacts (analysis, research, cover letter). Only include links for files that actually exist. Omit the line entirely if no files exist.
 - Omit fields that have no value. Never write blank placeholders.

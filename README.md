@@ -1,58 +1,77 @@
 # The Job Office
 
-A unified job search system: one assistant that routes between Analyzer, Company Researcher, Cover Letter, Tracker, and Content Writer. You set up Shared once (resumes, voice, preferences) and use one folder in Cowork or a Claude project. Natural language — "analyze this role," "research this company," "draft a cover letter," "what's in my pipeline" — and the system routes to the right tool and can chain between them.
+Analyze roles, research companies, write cover letters, and track your pipeline — all in one place, in natural language. Set it up once and use it like a colleague: "analyze this role," "research this company," "draft a cover letter," "what's in my pipeline."
 
----
+## Getting started
 
-## What's in the system
+You can run the Job Office two ways: in Cowork (recommended) or as a Claude Project.
 
-- **system-prompt.md** — The orchestrator. Load this and use it for everything. On first use it will offer to run setup (preferences and resume); after that it routes your messages to the right tool.
-- **ONBOARDING.md** — The setup flow. You don't load it yourself — the system offers to run it when you're not set up yet.
-- **VOICE-QUIZ.md** — Optional voice setup. The Cover Letter and Content Writer tools will offer to run it when your voice files aren't filled in yet.
-- **Shared/** — Your data: pipeline, preferences, resumes, and voice rules. All tools read from here. Set up during onboarding; grows as you use the system.
-- **Content-Writer/, Analyzer/, Company-Researcher/, Cover-Letter/, Tracker/** — Five tool folders. The orchestrator loads them automatically when you need them.
+**Option 1: Cowork (recommended)**
 
----
+Requirements: A [Cowork](https://claude.ai) subscription.
 
-## New to Cowork?
+1. Download or clone this repo to your computer.
+2. Open Cowork, start a new session, and select this folder as your workspace.
+3. Load `system-prompt.md` as your starting prompt.
+4. On first use the system will offer to run setup — say yes. It takes about 5 minutes and asks for your preferences and resume.
 
-Cowork is a desktop AI tool that works with files on your computer. Here's the basic idea:
+After that, load `system-prompt.md` at the start of each session. That's your permanent entry point.
 
-1. You point Cowork at a folder on your machine — for the Job Office, that's this folder.
-2. You start a session by loading a file as your "system prompt" — the instructions that tell the AI what to do.
-3. The AI reads and writes files in your folder, so your analyses, cover letters, and pipeline all save automatically between sessions.
+**Option 2: Claude Project**
 
-To load a file in Cowork: start a new session, select this folder as your workspace, and choose the file you want as the starting prompt.
+Requirements: A Claude Pro, Team, or Enterprise subscription.
 
----
+1. Create a new Project in Claude.
+2. Paste the contents of `system-prompt.md` into the Project Instructions field.
+3. Upload your resume and any other files from `Shared/` as Project knowledge.
+4. Start a conversation and follow the onboarding prompts.
 
-## How to get started
+The Project approach means you don't need to load anything at the start of each conversation — the instructions are always active. The tradeoff is that file management is manual (you update uploads yourself rather than editing files directly).
 
-1. **Download or clone** this folder to your computer.
-2. **Start a Cowork session**, point it at this folder, and load **system-prompt.md** as your starting prompt. On first use the system will offer to run setup — say yes and it'll ask a few questions (preferences and resume), then drop you into the Job Office. Takes about 5 minutes.
-3. **For future sessions**, load **system-prompt.md** again. That's your day-to-day entry point.
-4. Before your first cover letter or content, the tools will offer to run voice setup if you haven't filled it in yet.
+## What's included
 
----
+**Five tools, one orchestrator:**
+
+The **Analyzer** scores job fit, breaks down qualifications, and flags gaps. The **Company Researcher** looks into funding, culture, and growth to help you decide whether a company is worth your time. The **Cover Letter** tool drafts letters in your voice using context from the analysis and research. The **Tracker** manages your pipeline. The **Content Writer** helps with LinkedIn and other job search content.
+
+Everything routes through a single `system-prompt.md` so you only ever load one file.
+
+**Shared memory across tools:**
+
+All five tools read from a `Shared/` folder: your resumes, preferences, voice rules, and pipeline. Set it up once during onboarding and it stays current as you work.
 
 ## Recommended workflow
 
-**Apply phase:** Find a role → **Analyzer** (fit score, qualifications, gaps) → **Company Researcher** (is the company worth it?) → **Cover Letter** (draft + resume suggestions) → **Tracker** (mark Applied, set follow-up). See [WORKFLOW.md](WORKFLOW.md) for the full sequence and flow diagram.
+**When you find a role:**
 
-**Prep phase (when you get an interview):** Questions, STAR stories, prep doc. An Interview Prep tool is planned; until then you can use the Tracker to update status to Interviewing and log contacts.
+1. Paste the job description into the Analyzer. Get a fit score, qualification breakdown, and resume suggestions.
+2. Run Company Researcher on the company — funding, culture, whether it's worth pursuing.
+3. Draft a cover letter with the Cover Letter tool. It uses your analysis and company research automatically.
+4. Log the role in Tracker and mark it Applied when you send.
 
----
+**When you get an interview:**
 
-## How to run it
+Update the Tracker to Interviewing. An Interview Prep tool (questions, STAR stories, prep doc) is on the roadmap.
 
-**Cowork:** Store this folder on your machine, start a Cowork session, and point it at this folder. On first use, the system will offer to run setup — say yes and it'll ask a few questions and get your preferences and resume in place, then drop you into the Job Office. For all future sessions, the system starts automatically. Research, analyses, and cover letters save to the folder; pipeline and indexes stay in sync.
+See [WORKFLOW.md](WORKFLOW.md) for the full sequence and a flow diagram.
 
-**Claude project:** Create a project and add this folder as project knowledge. Paste `system-prompt.md` into Custom Instructions so the orchestrator runs automatically. On first use it will offer to run setup — say yes and it'll walk you through preferences and resume (it uses ONBOARDING.md from the project). Voice setup is offered by the Cover Letter and Content Writer tools when you need it.
+## File structure
 
-**Standalone:** You can also run a single tool by pointing your AI at that tool's folder (e.g. `Analyzer/` or `Cover-Letter/`) and loading its `system-prompt.md`. No orchestrator; that tool runs on its own.
+```
+/
+├── system-prompt.md        # Load this. Routes everything.
+├── ONBOARDING.md           # Runs automatically on first use
+├── VOICE-QUIZ.md           # Optional — sets up your writing voice
+├── WORKFLOW.md             # Full workflow guide
+├── Shared/                 # Your data (resumes, preferences, pipeline, voice)
+├── Analyzer/               # Job fit scoring and qualification breakdown
+├── Company-Researcher/     # Funding, culture, and growth research
+├── Cover-Letter/           # Drafts in your voice using analysis + research
+├── Content-Writer/         # LinkedIn and job search content
+└── Tracker/                # Application pipeline management
+```
 
----
+## Running individual tools
 
-## How the system grows
+You can also run any tool on its own by loading its `system-prompt.md` directly. Useful if you only need one piece of the system.
 
-As you use it, the pipeline and indexes (Analyses, Research, Cover Letter Output) fill in. You can add roles manually in Tracker or run them through Analyzer and Company Researcher first. An Interview Prep tool is planned; when it exists, the chain will extend to prep docs and STAR stories. The system is designed so new tools plug in without changing the ones you already have.
